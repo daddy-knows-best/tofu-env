@@ -1,4 +1,4 @@
-FROM ghcr.io/daddy-knows-best/dev-env:latest 
+FROM ghcr.io/daddy-knows-best/dev-env:latest
 ARG USERNAME=ubuntu
 ARG USER_UID=1000
 ARG USER_GID=1000
