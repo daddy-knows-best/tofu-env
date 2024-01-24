@@ -2,7 +2,7 @@
 dev-env for OpenTofu
 
 # history
-01/22/2024 created the repo
+01/22/2024 created the repo and transferred to daddy-knows-best
 
 # how to run
 
