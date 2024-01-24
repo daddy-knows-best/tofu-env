@@ -7,27 +7,35 @@ dev-env for OpenTofu
 # how to run
 
 ```
-$ docker compose run --rm dev-env
-07:25:09 ubuntu@1e3e8b93e4e8 dev-env ±|main ✗|→ tofu version
-OpenTofu v1.6.0
-on linux_amd64
-07:25:18 ubuntu@1e3e8b93e4e8 dev-env ±|main ✗|→ tofuenv list
-* 1.6.0 (set by /home/ubuntu/.tofuenv/version)
-08:02:45 ubuntu@498b898d3351 dev-env ±|README|→ cd 01-ibmcloud-tfp/
+$ docker compose pull
+[+] Pulling 17/17
+ ✔ dev-env 16 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled                                                                                                                                           3.2s
+   ✔ 29202e855b20 Already exists                                                                                                                                                                         0.0s
+   ✔ 32b1aecb64af Already exists                                                                                                                                                                         0.0s
+   ✔ cbfe5fe7dd2d Already exists                                                                                                                                                                         0.0s
+   ✔ 3ac51c1e99b0 Already exists                                                                                                                                                                         0.0s
+   ✔ c62c70c6dc58 Already exists                                                                                                                                                                         0.0s
+   ✔ 127f69e8f3f9 Already exists                                                                                                                                                                         0.0s
+   ✔ b06d9d3b1d63 Already exists                                                                                                                                                                         0.0s
+   ✔ 43de8e992f35 Already exists                                                                                                                                                                         0.0s
+   ✔ 20977f43bd8b Already exists                                                                                                                                                                         0.0s
+   ✔ d9379350f532 Already exists                                                                                                                                                                         0.0s
+   ✔ 0462a8dce828 Already exists                                                                                                                                                                         0.0s
+   ✔ c20b31284929 Already exists                                                                                                                                                                         0.0s
+   ✔ 2787c86fe6d9 Already exists                                                                                                                                                                         0.0s
+   ✔ 2b4c20a5ccdd Pull complete                                                                                                                                                                          0.4s
+   ✔ 6ee8a15dbc27 Pull complete                                                                                                                                                                          1.5s
+   ✔ 4f4fb700ef54 Pull complete                                                                                                                                                                          0.3s
+SYs-MBAir-M1:tofu-env seungyeop$ docker compose run --rm dev-env
+08:19:21 ubuntu@0dce6b63ae51 dev-env ±|main|→ cd 01-ibmcloud-tfp/
 /dev-env/01-ibmcloud-tfp
-08:02:53 ubuntu@498b898d3351 01-ibmcloud-tfp ±|README|→ tofu init
+08:19:35 ubuntu@0dce6b63ae51 01-ibmcloud-tfp ±|main|→ tofu init
 
 Initializing the backend...
 
 Initializing provider plugins...
-- Finding ibm-cloud/ibm versions matching ">= 1.12.0"...
-- Installing ibm-cloud/ibm v1.61.0...
-- Installed ibm-cloud/ibm v1.61.0. Signature validation was skipped due to the registry not containing GPG keys for this provider
-
-OpenTofu has created a lock file .terraform.lock.hcl to record the provider
-selections it made above. Include this file in your version control repository
-so that OpenTofu can guarantee to make the same selections by default when
-you run "tofu init" in the future.
+- Reusing previous version of ibm-cloud/ibm from the dependency lock file
+- Using previously-installed ibm-cloud/ibm v1.61.0
 
 OpenTofu has been successfully initialized!
 
@@ -38,5 +46,10 @@ should now work.
 If you ever set or change modules or backend configuration for OpenTofu,
 rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
-08:03:05 ubuntu@498b898d3351 01-ibmcloud-tfp ±|README ✗|→
+08:19:49 ubuntu@0dce6b63ae51 01-ibmcloud-tfp ±|main|→ tofu plan
+
+No changes. Your infrastructure matches the configuration.
+
+OpenTofu has compared your real infrastructure against your configuration and found no differences, so no changes are needed.
+08:19:55 ubuntu@0dce6b63ae51 01-ibmcloud-tfp ±|main|→
 ```
