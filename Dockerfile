@@ -50,4 +50,11 @@ RUN set -ex && \
   echo 'export PATH="$HOME/.tgenv/bin:$PATH"' >> ~/.bashrc
 ENV PATH=${HOME}/.tgenv/bin:$PATH
 
+# terragrunt & set the default as tofu
+RUN set -ex && \
+  tgenv install latest && \
+  tgenv use latest && \
+  echo 'export TERRAGRUNT_TFPATH=tofu' >> ~/.bashrc
+ENV TERRAGRUNT_TFPATH=tofu
+
 WORKDIR ${WORKDIR}
