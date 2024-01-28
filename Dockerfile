@@ -44,4 +44,10 @@ RUN set -ex && \
   tfenv install 1.6.6 && \
   tfenv use 1.6.6
 
+# tgenv
+RUN set -ex && \
+  git clone --depth 1 --branch main https://github.com/tgenv/tgenv.git ~/.tgenv && \
+  echo 'export PATH="$HOME/.tgenv/bin:$PATH"' >> ~/.bashrc
+ENV PATH=${HOME}/.tgenv/bin:$PATH
+
 WORKDIR ${WORKDIR}
