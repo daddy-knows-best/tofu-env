@@ -33,4 +33,15 @@ RUN set -ex && \
   tofuenv install 1.6.0 && \
   tofuenv use 1.6.0
 
+# tfenv
+RUN set -ex && \
+	git clone https://github.com/tfutils/tfenv.git ~/.tfenv && \
+	echo 'export PATH=$HOME/.tfenv/bin:$PATH' >> ~/.bashrc
+ENV PATH=${HOME}/.tfenv/bin:$PATH
+
+# terraform 1.6.6
+RUN set -ex && \
+  tfenv install 1.6.6 && \
+  tfenv use 1.6.6
+
 WORKDIR ${WORKDIR}
