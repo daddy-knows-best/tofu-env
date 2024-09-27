@@ -1,9 +1,12 @@
 # tofu-env
+
 dev-env for OpenTofu
 
 # history
-01/22/2024 created the repo and transferred to daddy-knows-best
-01/28/2024 tfenv and tgenv
+
+- 01/22/2024 created the repo and transferred to daddy-knows-best
+- 01/28/2024 tfenv and tgenv
+- 09/26/2024 ubuntu24
 
 # how to run
 

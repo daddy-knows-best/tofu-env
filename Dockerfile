@@ -1,7 +1,5 @@
 FROM ghcr.io/daddy-knows-best/dev-env:latest
 ARG USERNAME=ubuntu
-ARG USER_UID=1000
-ARG USER_GID=1000
 ENV WORKDIR=/dev-env
 
 LABEL "maintainer"="Daddy Knows Best"
@@ -35,8 +33,8 @@ RUN set -ex && \
 
 # tfenv
 RUN set -ex && \
-	git clone https://github.com/tfutils/tfenv.git ~/.tfenv && \
-	echo 'export PATH=$HOME/.tfenv/bin:$PATH' >> ~/.bashrc
+  git clone https://github.com/tfutils/tfenv.git ~/.tfenv && \
+  echo 'export PATH=$HOME/.tfenv/bin:$PATH' >> ~/.bashrc
 ENV PATH=${HOME}/.tfenv/bin:$PATH
 
 # terraform 1.6.6
